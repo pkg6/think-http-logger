@@ -95,8 +95,3 @@ public function logRequest(Request $request): void
     Log::channel(config('http-logger.log_channel'))->info($message);
 }
 ~~~
-
-## License
-
-The MIT License (MIT). Please see [License File](https://github.com/tp5er/think-http-logger/blob/master/LICENSE) for more information.
-
