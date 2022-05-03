@@ -1,0 +1,30 @@
+{
+  "name": "whereof/think-http-logger",
+  "description": "A Thinkphp package to log HTTP requests",
+  "keywords": [
+    "thinkphp",
+    "think-http-logger"
+  ],
+  "require": {
+    "php": "^7.2",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "whereof\\think\\HttpLogger\\": "src"
+    }
+  },
+  "require-dev": {
+    "topthink/framework": "^6.0"
+  },
+  "extra": {
+    "think": {
+      "services": [
+        "whereof\\think\\HttpLogger\\Service"
+      ],
+      "config": {
+        "http-logger": "config/http-logger.php"
+      }
+    }
+  }
+}
