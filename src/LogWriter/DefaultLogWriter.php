@@ -1,11 +1,11 @@
 <?php
 
-namespace whereof\think\HttpLogger\LogWriter;
+namespace tp5er\think\HttpLogger\LogWriter;
 
 use think\facade\Log;
 use think\file\UploadedFile;
 use think\Request;
-use whereof\think\HttpLogger\LogWriter;
+use tp5er\think\HttpLogger\LogWriter;
 
 
 class DefaultLogWriter implements LogWriter

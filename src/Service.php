@@ -1,9 +1,9 @@
 <?php
 
 
-namespace whereof\think\HttpLogger;
+namespace tp5er\think\HttpLogger;
 
-use whereof\think\HttpLogger\Middlewares\HttpLogger;
+use tp5er\think\HttpLogger\Middlewares\HttpLogger;
 
 class Service extends \think\Service
 {

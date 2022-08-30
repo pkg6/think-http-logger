@@ -1,6 +1,6 @@
 <?php
 
-namespace whereof\think\HttpLogger;
+namespace tp5er\think\HttpLogger;
 
 use think\Request;
 

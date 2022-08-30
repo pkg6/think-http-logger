@@ -2,13 +2,13 @@
 
 declare (strict_types = 1);
 
-namespace whereof\think\HttpLogger\Middlewares;
+namespace tp5er\think\HttpLogger\Middlewares;
 
 use Closure;
 use think\Request;
 use think\Response;
-use whereof\think\HttpLogger\LogProfile;
-use whereof\think\HttpLogger\LogWriter;
+use tp5er\think\HttpLogger\LogProfile;
+use tp5er\think\HttpLogger\LogWriter;
 
 
 class HttpLogger

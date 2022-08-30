@@ -11,13 +11,13 @@ return [
    * The log profile which determines whether a request should be logged.
    * It should implement `LogProfile`.
    */
-    'log_profile' => \whereof\think\HttpLogger\LogProfile\LogNonGetRequests::class,
+    'log_profile' => \tp5er\think\HttpLogger\LogProfile\LogNonGetRequests::class,
 
     /*
      * The log writer used to write the request to a log.
      * It should implement `LogWriter`.
      */
-    'log_writer'  => \whereof\think\HttpLogger\LogWriter\DefaultLogWriter::class,
+    'log_writer'  => \tp5er\think\HttpLogger\LogWriter\DefaultLogWriter::class,
 
     /*
     * The log channel used to write the request.
@@ -31,7 +31,7 @@ return [
 ## 控制器中使用
 
 ~~~
-use whereof\think\HttpLogger\Middlewares\HttpLogger;
+use tp5er\think\HttpLogger\Middlewares\HttpLogger;
 class Index extends BaseController
 {
     protected $middleware =[
@@ -49,7 +49,7 @@ class Index extends BaseController
 ~~~
 Route::get('think', function () {
     return 'hello,ThinkPHP6!';
-})->middleware(\whereof\think\HttpLogger\Middlewares\HttpLogger::class);
+})->middleware(\tp5er\think\HttpLogger\Middlewares\HttpLogger::class);
 ~~~
 
 ## 全局`app/middleware.php`
@@ -59,7 +59,7 @@ Route::get('think', function () {
 // 全局中间件定义文件
 return [
 		......
-    \whereof\think\HttpLogger\Middlewares\HttpLogger::class
+    \tp5er\think\HttpLogger\Middlewares\HttpLogger::class
 ];
 ~~~
 
@@ -70,10 +70,10 @@ return [
 
 您可以自由实现自己的日志配置文件和/或日志编写器类，并在` config/http-logger.php` 中进行配置。
 
-自定义日志配置文件必须实现` \whereof\think\HttpLogger\LogProfile`。 这个接口需要你实现 shouldLogRequest。
+自定义日志配置文件必须实现` \tp5er\think\HttpLogger\LogProfile`。 这个接口需要你实现 shouldLogRequest。
 
 ~~~
-// Example implementation from `whereof\think\HttpLogger\LogNonGetRequests`
+// Example implementation from `tp5er\think\HttpLogger\LogNonGetRequests`
 
 public function shouldLogRequest(Request $request): bool
 {
@@ -81,10 +81,10 @@ public function shouldLogRequest(Request $request): bool
 }
 ~~~
 
-自定义日志编写器必须实现 \whereof\think\HttpLogger\LogWriter。 这个接口需要你实现logRequest。
+自定义日志编写器必须实现 \tp5er\think\HttpLogger\LogWriter。 这个接口需要你实现logRequest。
 
 ~~~
-// Example implementation from ` \whereof\think\HttpLogger\DefaultLogWriter`
+// Example implementation from ` \tp5er\think\HttpLogger\DefaultLogWriter`
 
 public function logRequest(Request $request): void
 {

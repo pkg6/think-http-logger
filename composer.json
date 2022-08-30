@@ -1,5 +1,5 @@
 {
-  "name": "whereof/think-http-logger",
+  "name": "tp5er/think-http-logger",
   "description": "A Thinkphp package to log HTTP requests",
   "keywords": [
     "thinkphp",
@@ -11,7 +11,7 @@
   },
   "autoload": {
     "psr-4": {
-      "whereof\\think\\HttpLogger\\": "src"
+      "tp5er\\think\\HttpLogger\\": "src"
     }
   },
   "require-dev": {
@@ -20,7 +20,7 @@
   "extra": {
     "think": {
       "services": [
-        "whereof\\think\\HttpLogger\\Service"
+        "tp5er\\think\\HttpLogger\\Service"
       ],
       "config": {
         "http-logger": "config/http-logger.php"

@@ -1,9 +1,9 @@
 <?php
 
-namespace whereof\think\HttpLogger\LogProfile;
+namespace tp5er\think\HttpLogger\LogProfile;
 
 use think\Request;
-use whereof\think\HttpLogger\LogProfile;
+use tp5er\think\HttpLogger\LogProfile;
 
 
 class LogRobotRequests implements LogProfile
