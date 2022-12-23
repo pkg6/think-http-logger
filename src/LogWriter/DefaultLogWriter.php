@@ -28,6 +28,7 @@ class DefaultLogWriter implements LogWriter
     {
         $files = $this->files($request->file());
         return [
+            'client_ip' => $request->ip(),
             'method'  => strtoupper($request->method()),
             'uri'     => $request->pathinfo(),
             'body'    => $request->all(),
@@ -42,10 +43,11 @@ class DefaultLogWriter implements LogWriter
      */
     protected function formatMessage(array $message)
     {
+        $clientIpAsJson    = json_encode($message['client_ip']);
         $bodyAsJson    = json_encode($message['body']);
         $headersAsJson = json_encode($message['headers']);
         $files         = implode(',', $message['files']);
-        return "{$message['method']} {$message['uri']} - Body: {$bodyAsJson} - Headers: {$headersAsJson} - Files: " . $files;
+        return "{$message['method']} {$message['uri']} - Ip: {$client_ip}- Body: {$clientIpAsJson} - Headers: {$headersAsJson} - Files: " . $files;
     }
 
 
