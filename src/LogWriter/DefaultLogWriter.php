@@ -47,7 +47,7 @@ class DefaultLogWriter implements LogWriter
         $bodyAsJson    = json_encode($message['body']);
         $headersAsJson = json_encode($message['headers']);
         $files         = implode(',', $message['files']);
-        return "{$message['method']} {$message['uri']} - Ip: {$client_ip}- Body: {$clientIpAsJson} - Headers: {$headersAsJson} - Files: " . $files;
+        return "{$message['method']} {$message['uri']} - Ip: {$clientIpAsJson}- Body: {$bodyAsJson} - Headers: {$headersAsJson} - Files: " . $files;
     }
 
 
