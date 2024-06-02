@@ -5,6 +5,7 @@ declare (strict_types = 1);
 namespace tp5er\think\HttpLogger\Middlewares;
 
 use Closure;
+use think\event\LogRecord;
 use think\Request;
 use think\Response;
 use tp5er\think\HttpLogger\LogProfile;
