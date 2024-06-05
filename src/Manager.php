@@ -24,6 +24,7 @@ class Manager
      * HttpLogger constructor.
      * @param LogProfile $logProfile
      * @param LogWriter $logWriter
+     * @param Request|null $request
      */
     public function __construct(LogProfile $logProfile, LogWriter $logWriter, Request $request = null)
     {
@@ -42,6 +43,27 @@ class Manager
         $this->request = $request;
         return $this;
     }
+
+    /**
+     * @param LogProfile $logProfile
+     * @return Manager
+     */
+    public function setLogProfile(LogProfile $logProfile)
+    {
+        $this->logProfile = $logProfile;
+        return $this;
+    }
+
+    /**
+     * @param LogWriter $logWriter
+     * @return Manager
+     */
+    public function setLogWriter(LogWriter $logWriter)
+    {
+        $this->logWriter = $logWriter;
+        return $this;
+    }
+
 
     /**
      * @return void

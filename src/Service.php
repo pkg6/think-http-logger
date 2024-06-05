@@ -12,9 +12,14 @@ class Service extends \think\Service
     public function register()
     {
 
-        $this->app->bind(LogProfile::class, $this->app->config->get('http-logger.log_profile', LogNonGetRequests::class));
-        $this->app->bind(LogWriter::class, $this->app->config->get('http-logger.log_writer', DefaultLogWriter::class));
-
+        $this->app->bind(LogProfile::class, function () {
+            $class = $this->app->config->get('http-logger.log_profile', LogNonGetRequests::class);
+            return new $class($this->app);
+        });
+        $this->app->bind(LogWriter::class, function () {
+            $class = $this->app->config->get('http-logger.log_writer', DefaultLogWriter::class);
+            return new $class($this->app);
+        });
         $this->app->bind(Manager::class, function () {
             return new Manager(
                 $this->app->get(LogProfile::class),
