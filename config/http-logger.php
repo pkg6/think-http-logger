@@ -17,5 +17,5 @@ return [
     /*
     * The log channel used to write the request.
     */
-    'log_channel' => env('LOG_CHANNEL', 'file')
+    'log_channel' => env('LOG_CHANNEL', 'file'),
 ];

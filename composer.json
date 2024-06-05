@@ -15,7 +15,8 @@
     }
   },
   "require-dev": {
-    "topthink/framework": "^6.0"
+    "topthink/framework": "^6.0",
+    "tp5er/think-auth": "^1.0"
   },
   "extra": {
     "think": {
