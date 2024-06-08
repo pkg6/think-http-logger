@@ -1,9 +1,16 @@
 {
   "name": "tp5er/think-http-logger",
   "description": "A Thinkphp package to log HTTP requests",
+  "license": "MIT",
   "keywords": [
     "thinkphp",
     "think-http-logger"
+  ],
+  "authors": [
+    {
+      "name": "zhiqiang",
+      "email": "zhiqiang2033@gmail.com"
+    }
   ],
   "require": {
     "php": "^7.2|^8.0.2",
